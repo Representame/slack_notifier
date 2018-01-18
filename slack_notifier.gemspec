@@ -9,15 +9,20 @@ Gem::Specification.new do |s|
   s.version     = SlackNotifier::VERSION
   s.authors     = ["Mauricio Caroca"]
   s.email       = ["maucaroca@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SlackNotifier."
-  s.description = "TODO: Description of SlackNotifier."
+  s.summary     = 'Slack Notifier'
+  s.description = 'Slack Notifier for Representame.cl'
+  s.homepage    = 'https://github.com/Representame/slack_notifier'
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = [
+    'lib/slack.rb'
+  ]
+  s.require_paths = ['lib']
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.1.16"
+  s.add_dependency "rails", "~> 5.1.4"
+  s.add_dependency 'slack-notify'
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'bundler'
+  s.add_development_dependency 'rake'
 end
